@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jihuo - Epic Monster Survival Game | Play Free Online at jihuo.space</title>
+    <meta name="description" content="Play Jihuo, the ultimate monster survival game online for free. Battle fierce creatures, collect power-ups, and survive waves of enemies in this action-packed adventure game.">
+    <meta name="keywords" content="jihuo, monster survival game, online game, free game, action game, survival, monsters, battle">
+    <meta name="author" content="jihuo.space">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Jihuo - Epic Monster Survival Game">
+    <meta property="og:description" content="Play Jihuo, the ultimate monster survival game online for free. Battle fierce creatures and survive waves of enemies.">
+    <meta property="og:url" content="https://jihuo.space">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jihuo Game">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jihuo - Epic Monster Survival Game">
+    <meta name="twitter:description" content="Play Jihuo, the ultimate monster survival game online for free.">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jihuo.space">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles with Apple Color Palette -->
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-indigo: #5856D6;
+            --apple-purple: #AF52DE;
+            --apple-pink: #FF2D92;
+            --apple-red: #FF3B30;
+            --apple-orange: #FF9500;
+            --apple-yellow: #FFCC00;
+            --apple-green: #34C759;
+            --apple-mint: #00C7BE;
+            --apple-teal: #59ADC4;
+            --apple-cyan: #55BEF0;
+            --apple-gray: #8E8E93;
+            --apple-gray2: #AEAEB2;
+            --apple-gray3: #C7C7CC;
+            --apple-gray4: #D1D1D6;
+            --apple-gray5: #E5E5EA;
+            --apple-gray6: #F2F2F7;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, var(--apple-blue), var(--apple-indigo));
+            min-height: 100vh;
+        }
+        
+        .game-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, var(--apple-pink), var(--apple-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--apple-green), var(--apple-mint));
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(52, 199, 89, 0.3);
+        }
+        
+        iframe {
+            border-radius: 15px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .game-iframe {
+                height: 400px;
+            }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
+</head>
+<body class="text-white">
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-circle bg-white w-20 h-20 top-10 left-10" style="animation-delay: 0s;"></div>
+        <div class="floating-circle bg-white w-16 h-16 top-1/4 right-20" style="animation-delay: 2s;"></div>
+        <div class="floating-circle bg-white w-12 h-12 bottom-20 left-1/4" style="animation-delay: 4s;"></div>
+        <div class="floating-circle bg-white w-24 h-24 bottom-10 right-10" style="animation-delay: 1s;"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10 py-6">
+        <nav class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold gradient-text">Jihuo.space</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#game" class="hover:text-yellow-300 transition-colors">Play Game</a>
+                    <a href="#features" class="hover:text-yellow-300 transition-colors">Features</a>
+                    <a href="#about" class="hover:text-yellow-300 transition-colors">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text pulse-animation">
+                Jihuo
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                Dive into the ultimate monster survival experience where every second counts and every decision matters.
+            </p>
+            <button class="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform">
+                <a href="#game" class="block w-full h-full">Start Playing Now</a>
+            </button>
+        </section>
+
+        <!-- Game Section -->
+        <section id="game" class="mb-16">
+            <div class="game-container p-6 md:p-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Play Jihuo Online</h2>
+                <div class="w-full max-w-5xl mx-auto">
+                    <iframe 
+                        src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
+                        class="w-full h-96 md:h-[600px] game-iframe"
+                        frameborder="0"
+                        allowfullscreen
+                        title="Jihuo Monster Survival Game">
+                    </iframe>
+                </div>
+                <p class="text-center mt-4 text-gray-200">
+                    Use arrow keys or WASD to move, mouse to aim and click to attack. Survive as long as you can!
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Game Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card p-6 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">⚔️</div>
+                    <h3 class="text-xl font-semibold mb-3">Intense Combat</h3>
+                    <p class="text-gray-200">Engage in fast-paced battles against hordes of monsters with responsive controls and smooth gameplay mechanics.</p>
+                </div>
+                <div class="feature-card p-6 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold mb-3">Strategic Survival</h3>
+                    <p class="text-gray-200">Make tactical decisions, manage resources, and adapt your strategy to survive increasingly difficult waves.</p>
+                </div>
+                <div class="feature-card p-6 rounded-2xl text-center">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-semibold mb-3">Power-Ups & Upgrades</h3>
+                    <p class="text-gray-200">Collect powerful upgrades and unlock new abilities to enhance your combat effectiveness and survival chances.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="mb-16">
+            <div class="game-container p-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">About Jihuo</h2>
+                <div class="max-w-4xl mx-auto">
+                    <p class="text-lg mb-6 leading-relaxed">
+                        Jihuo is an adrenaline-pumping monster survival game that challenges players to test their reflexes, strategy, and endurance. Set in a dark, atmospheric world filled with dangerous creatures, players must navigate through increasingly difficult waves of enemies while collecting power-ups and upgrades to enhance their abilities.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Gameplay Mechanics</h3>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        The game features intuitive controls that are easy to learn but challenging to master. Players use keyboard controls for movement and mouse controls for aiming and attacking. The game's dynamic difficulty system ensures that each playthrough presents new challenges and keeps players engaged for hours.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Key Highlights</h3>
+                    <ul class="text-lg space-y-2 list-none">
+                        <li class="flex items-center"><span class="text-green-400 mr-3">✓</span> Fast-paced action gameplay</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-3">✓</span> Progressive difficulty system</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-3">✓</span> Multiple weapon types and upgrades</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-3">✓</span> Immersive sound effects and music</li>
+                        <li class="flex items-center"><span class="text-green-400 mr-3">✓</span> Optimized for both desktop and mobile devices</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center">
+            <div class="game-container p-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Test Your Survival Skills?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">
+                    Join thousands of players who have already experienced the thrill of Jihuo. How long can you survive?
+                </p>
+                <button class="btn-primary text-white px-10 py-5 rounded-full text-xl font-semibold hover:scale-105 transition-transform">
+                    <a href="#game" class="block w-full h-full">Play Jihuo Now</a>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-gray-300 mb-4">© 2025 Jihuo.space - All rights reserved</p>
+            <p class="text-gray-400 text-sm">
+                Experience the ultimate monster survival game. Play free online at jihuo.space
+            </p>
+        </div>
+    </footer>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Jihuo",
+        "description": "Epic monster survival game where players battle fierce creatures and survive waves of enemies in an action-packed adventure.",
+        "url": "https://jihuo.space",
+        "genre": "Action, Survival",
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "jihuo.space"
+        }
+    }
+    </script>
+</body>
+</html>
